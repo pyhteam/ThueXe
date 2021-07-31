@@ -1,0 +1,84 @@
+﻿@model WebCar.Areas.Admin.Models.Entities.Xe
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid m-1">
+    
+<h3>Thêm mới xe</h3>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data" >
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="NameCar" class="control-label"></label>
+                <input asp-for="NameCar" class="form-control" />
+                <span asp-validation-for="NameCar" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageFile" id="imagelb" class="control-label"></label>
+                <input asp-for="ImageFile" type="file" class="form-control" />
+                <span asp-validation-for="ImageFile" id="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TomTat" class="control-label"></label>
+                <input asp-for="TomTat" class="form-control" />
+                <span asp-validation-for="TomTat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoiDung" class="control-label"></label>
+               
+                <textarea id="editor" asp-for="NoiDung" class="form-control" row="10"></textarea>
+                <span asp-validation-for="NoiDung" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="GiaThue" class="control-label"></label>
+                <input asp-for="GiaThue" class="form-control" />
+                <span asp-validation-for="GiaThue" class="text-danger"></span>
+            </div>
+            
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="NoiBat" /> @Html.DisplayNameFor(model => model.NoiBat)
+                </label>
+            </div>
+            
+            <div class="form-group">
+                <label asp-for="DanhMucId" class="control-label"></label>
+                <select asp-for="DanhMucId" class ="form-control" asp-items="ViewBag.NameCategory"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+
+@section script{  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+   <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+    <script type="text/javascript">  
+        // Add the following code if you want the name of the file appear on select  
+        $("#Image").on("change", function () {  
+            var fileName = $(this).val().split("\\").pop();  
+            $(this).siblings("#imagelb").addClass("selected").html(fileName);  
+        });  
+    </script>  
+
+    <script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+    </script>
+} 

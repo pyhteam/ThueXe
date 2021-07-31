@@ -1,0 +1,59 @@
+﻿@model IEnumerable<ThueXe.Areas.Admin.Models.Entities.Blog>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+  <div class="container">
+      <h3>Danh sách tin tức</h3>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.TieuDe)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Images)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TomTat)
+            </th>
+
+            <th>
+                @Html.DisplayNameFor(model => model.NgayTao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TieuDe)
+                </td>
+                <td>
+                    <img src="~/blog/@Html.DisplayTextFor(modelItem =>item.Images)" style="width: 50px;" asp-append-version="true" />
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TomTat)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NgayTao)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.BlogId"><i class="fas fa-plus"></i></a> |
+                    <a asp-action="Details" asp-route-id="@item.BlogId"><i class="fas fa-eye"></i></a> |
+                    <a asp-action="Delete" asp-route-id="@item.BlogId"><i class="fas fa-trash-alt"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+</div>

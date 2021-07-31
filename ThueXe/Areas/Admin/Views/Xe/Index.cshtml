@@ -1,0 +1,89 @@
+﻿
+@model IEnumerable<WebCar.Areas.Admin.Models.Entities.Xe>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+
+  <div class="container">
+      <h3>Danh sách xe</h3>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary btn-sm">Thêm mới</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                    @Html.DisplayNameFor(model => model.NameCar)
+            </th>
+            <th>
+               
+                    @Html.DisplayNameFor(model => model.ImageName)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.TomTat)
+            </th>
+
+            <th>
+                    @Html.DisplayNameFor(model => model.GiaThue)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.CreateDate)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.NoiBat)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.LuotXem)
+            </th>
+            <th>
+                    @Html.DisplayNameFor(model => model.DanhMuc)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+            @foreach (var item in Model)
+            {
+                    <tr>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.NameCar)
+                        </td>
+                        <td>
+                        
+                        <img src="~/images/@Html.DisplayTextFor(modelItem =>item.ImageName)" style="width: 50px;" asp-append-version="true" />  
+                        
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.TomTat)
+                        </td>
+
+                        <td>
+                        @Html.DisplayFor(modelItem => item.GiaThue)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.CreateDate)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.NoiBat)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.LuotXem)
+                        </td>
+                        <td>
+                        @Html.DisplayFor(modelItem => item.DanhMuc.NameCategory)
+                        </td>
+                        <td>
+                            <a asp-action="Edit" asp-route-id="@item.CarId"><i class="fas fa-plus"></i></a> |
+                            <a asp-action="Details" asp-route-id="@item.CarId"><i class="fas fa-eye"></i></a> |
+                            <a asp-action="Delete" asp-route-id="@item.CarId"><i class="fas fa-trash-alt"></i></a>
+                        </td>
+                    </tr>
+            }
+    </tbody>
+</table>
+
+  </div>

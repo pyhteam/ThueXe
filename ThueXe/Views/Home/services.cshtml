@@ -1,0 +1,39 @@
+﻿@model IEnumerable<ThueXe.Areas.Admin.Models.Entities.Blog>
+@{
+    ViewData["Title"] = "services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-bottom">
+    <div class="wrap">
+        <div class="main-box">
+            <div class="filter-wrapper ">
+                <div class="category">
+                    <strong>SERVICES: </strong>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="gallery-grids">
+                @foreach(var item in Model)
+                {
+                    <div class="gallery-grid">
+                    <a href="blog/@item.Images" class="swipebox">
+                        <img src="blog/@item.Images" alt="">
+                    </a>
+                    <h4>@item.TieuDe</h4>
+                    <p>
+                       @item.TomTat
+                    </p>
+                    <p>
+                        <a asp-controller="Blog" asp-action="XemChiTiet" asp-route-id="@item.BlogId"  class="btn btn-primary"> Đọc thêm</a>
+                        
+                    </p>
+                </div>
+                }
+                <div class="clear"> </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+

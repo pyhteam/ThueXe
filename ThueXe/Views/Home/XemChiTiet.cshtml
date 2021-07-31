@@ -1,0 +1,26 @@
+﻿@model ThueXe.Areas.Admin.Models.Entities.Blog
+@{
+    ViewData["Title"] = "XemChiTiet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="header-bottom">
+    <div class="wrap">
+        <div class="main-box">
+            <div class="filter-wrapper ">
+                <div class="category">
+                    <strong>
+                        @Html.DisplayTextFor(model => model.TieuDe)
+                    </strong>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="Content">
+              @Html.Raw(Model.NoiDung)
+            </div>
+
+
+        </div>
+    </div>
+</div>
+

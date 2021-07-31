@@ -1,0 +1,102 @@
+﻿
+@model IEnumerable<WebCar.Areas.Admin.Models.Entities.Xe>
+@{
+    ViewData["Title"] = "Home Page";
+}
+<style>
+    .img{
+        width: 330px;
+    }
+    
+
+    span.reducedfrom {
+    margin-right: 8%;
+    color: #000;
+    font-size: 1.0em;
+    font-weight: bold;
+}
+
+</style>
+
+@foreach (var item in ViewBag.Slide)
+{
+    <div class="main">
+        <div class="content-box" style="background: url('Images/@item.ImageName')">
+            <div class="wrap">
+                <div class="banner2">
+                    <a asp-controller="Home" asp-action="ChiTietXe" asp-route-id="@item.CarId">
+                        <div class="price">@string.Format("{0:#,0}", item.GiaThue)VNĐ</div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+<div class="main-content">
+    <div class="wrap">
+        <div class="main-box">
+            <div class="box_wrapper">
+                <h1> Sản phẩm nổi bật </h1>
+            </div>
+            <div class="section group">
+
+                @foreach(var item in Model)
+                {
+                    <div class="col_1_of_4 span_1_of_4">
+                    <img src="~/Images/@item.ImageName" alt="" />
+                    <div class="grid_desc">
+                        <p class="title">@item.NameCar</p>
+                      @*  <p class="title1">@item.TomTat</p>*@
+                        <div class="price1" style="height: 19px;">
+                            <span class="reducedfrom">@string.Format("{0:#,0}", item.GiaThue)  VNĐ/1 Ngày</span>
+                        </div>
+                    </div>
+                    <div class="Details">
+                        <a asp-controller="Home" asp-action="ChiTietXe" asp-route-id="@item.CarId"  class="button"> Chi Tiết</a>
+                    </div>
+                </div>
+                }
+                
+                
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="main-content">
+    <div class="wrap">
+        <div class="main-box">
+            <div class="box_wrapper">
+                <h2> Sản phẩm hot nhất </h2>
+            </div>
+            <div class="section group">
+                @foreach(var item in ViewBag.ViewCount)
+                {
+                    <div class="col_1_of_4 span_1_of_4">
+                    <img src="~/Images/@item.ImageName" alt="" />
+                    <div class="grid_desc">
+                        <p class="title">@item.NameCar</p>
+                      @*  <p class="title1">@item.NameCar</p>*@
+                        <div class="price1" style="height: 19px;">
+                            
+                            <span class="reducedfrom">@string.Format("{0:#,0}", item.GiaThue)  VNĐ/1 Ngày</span>
+                           
+                        </div>
+                    </div>
+                    <div class="Details">
+                        <a asp-controller="Home" asp-action="ChiTietXe" asp-route-id="@item.CarId"  class="button"> Chi Tiết</a>
+                    </div>
+                </div>
+                }
+               
+                
+                <div class="clear"></div>
+            </div>
+            
+        </div>
+    </div>
+</div>

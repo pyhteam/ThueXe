@@ -1,0 +1,249 @@
+﻿
+@{
+    ViewData["Title"] = "Xedaukeo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Cars Sale a Auto mobile Category Website Template | Single :: w3layouts</title>
+    <link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="~/web/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".dropdown img.flag").addClass("flagvisibility");
+
+            $(".dropdown dt a").click(function () {
+                $(".dropdown dd ul").toggle();
+            });
+
+            $(".dropdown dd ul li a").click(function () {
+                var text = $(this).html();
+                $(".dropdown dt a span").html(text);
+                $(".dropdown dd ul").hide();
+                $("#result").html("Selected value is: " + getSelectedValue("sample"));
+            });
+
+            function getSelectedValue(id) {
+                return $("#" + id).find("dt a span.value").html();
+            }
+
+            $(document).bind('click', function (e) {
+                var $clicked = $(e.target);
+                if (!$clicked.parents().hasClass("dropdown"))
+                    $(".dropdown dd ul").hide();
+            });
+
+
+            $("#flagSwitcher").click(function () {
+                $(".dropdown img.flag").toggleClass("flagvisibility");
+            });
+        });
+    </script>
+    <script type="text/javascript" src="~/web/js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="~/web/css/global.css">
+    <!--thumb slider--->
+    <script src="~/web/js/responsiveslides.min.js"></script>
+    <script>
+        // You can also use "$(window).load(function() {"
+        $(function () {
+            $("#slider").responsiveSlides({
+                auto: true,
+                manualControls: '#slider3-pager',
+            });
+        });
+    </script>
+    <!---thumb slider--->
+</head>
+<div class="header-bottom">
+    <div class="wrap">
+        <div class="single">
+            <div class="box_wrapper">
+                <h1>Xe Kéo</h1>
+            </div>
+            <div class="single-top">
+                <div class="thum-main">
+                    <div class="slider">
+                        <!-- Slideshow 3 -->
+                        <ul class="rslides rslides1" id="slider">
+                            <li id="rslides1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic-20.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic-21.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic-22.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s3" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out 0s;" class="rslides1_on">
+                                <img src="~/web/images/pic-23.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s4" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic-22.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s5" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;" class="">
+                                <img src="~/web/images/pic-21.jpg" alt="">
+                            </li>
+                        </ul>
+                        <!-- Slideshow 3 Pager -->
+                        <br>
+                        <br>
+                        <ul id="slider3-pager" class="rslides_tabs rslides1_tabs">
+                            <li class="rslides1_s1">
+                                <a href="#">
+                                    <img src="~/web/images/pic-20.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s2">
+                                <a href="#">
+                                    <img src="~/web/images/pic-21.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s3">
+                                <a href="#">
+                                    <img src="~/web/images/pic-22.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s4 rslides_here">
+                                <a href="#">
+                                    <img src="~/web/images/pic-23.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s5">
+                                <a href="#">
+                                    <img src="~/web/images/pic-22.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s6">
+                                <a href="#">
+                                    <img src="~/web/images/pic-21.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="grid span_2_of_3">
+                    <h3>Các xe đầu kéo</h3>
+                    <p>
+                        Thiết kế để Chinh phục
+                        Hộp số tự động 10 cấp công nghệ tiên tiến của Ranger kết hợp cùng động cơ Bi-Turbo 2.0L thế hệ mới cho công suất và mô-men xoắn bạn cần mà vẫn tiết kiệm nhiên liệu.
+                    </p>
+                    <p>
+                        Thiết kế đa năng
+                        Ranger Mới với thiết kế phía trước mạnh mẽ hơn, nội thất tiện nghi cùng những tính năng mới giúp cuộc sống của bạn dễ dàng hơn. Ranger Mới là chiếc xe bán tải được trang bị tính năng Hỗ trợ Nâng Cửa hậu thùng xe giúp cho việc chất dỡ hàng hóa nhẹ nhàng hơn.
+                    </p>
+                    <p>
+                        Khả năng toàn diện
+                        Lội nước? Không vấn đề. Tải nặng? Quá dễ. Đổ đèo hay cát trượt? Thẳng tiến thôi. Với Khả năng lội nước sâu đến 800mm1, sức kéo hàng đầu cùng Khóa vi sai Cầu sau Điện, Ranger dễ dàng vượt mọi thách thức..
+                    </p>
+                    <p>
+                        Thiết kế để Chinh phục
+                        Hộp số tự động 10 cấp công nghệ tiên tiến của Ranger kết hợp cùng động cơ Bi-Turbo 2.0L thế hệ mới cho công suất và mô-men xoắn bạn cần mà vẫn tiết kiệm nhiên liệu.
+                    </p>
+                    <p>
+                        Thiết kế đa năng
+                        Ranger Mới với thiết kế phía trước mạnh mẽ hơn, nội thất tiện nghi cùng những tính năng mới giúp cuộc sống của bạn dễ dàng hơn. Ranger Mới là chiếc xe bán tải được trang bị tính năng Hỗ trợ Nâng Cửa hậu thùng xe giúp cho việc chất dỡ hàng hóa nhẹ nhàng hơn.
+                    </p>
+                    <p>
+                        Khả năng toàn diện
+                        Lội nước? Không vấn đề. Tải nặng? Quá dễ. Đổ đèo hay cát trượt? Thẳng tiến thôi. Với Khả năng lội nước sâu đến 800mm1, sức kéo hàng đầu cùng Khóa vi sai Cầu sau Điện, Ranger dễ dàng vượt mọi thách thức..
+                    </p>
+
+                </div>
+                <div class="clear"></div>
+            </div>
+
+            <div class="clear"></div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon1.png" title="date">
+                            <span class="time"> @DateTime.Now.ToString("dd/MM/yyyy")</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon2.png" title="Admin">
+                            <span>admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon3.png" title="Comments">
+                            <span>No comments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon4.png" title="Lables">
+                            <span>View posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon5.png" title="permalink">
+                            <span>permalink</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="team">
+                <h2>Bài viết liên quan</h2>
+                <div class="section group">
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic-0.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic-6.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic-16.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic-20.jpg" alt="" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="leave-comment">
+                    <a href="#" name="comment">
+                        Để lại một bình luận
+                    </a>
+                </div>
+                <div class="comments-area">
+                    <form>
+                        <p>
+                            <label>Name</label>
+                            <span>*</span>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <span>*</span>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Website</label>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Subject</label>
+                            <span>*</span>
+                            <textarea></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Post">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

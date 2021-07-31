@@ -1,0 +1,244 @@
+﻿
+@{
+    ViewData["Title"] = "Single";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<head>
+    <title>Cars Sale a Auto mobile Category Website Template | Single :: w3layouts</title>
+    <link href="~/web/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="~/web/js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function () {
+			$(".dropdown img.flag").addClass("flagvisibility");
+
+			$(".dropdown dt a").click(function () {
+				$(".dropdown dd ul").toggle();
+			});
+
+			$(".dropdown dd ul li a").click(function () {
+				var text = $(this).html();
+				$(".dropdown dt a span").html(text);
+				$(".dropdown dd ul").hide();
+				$("#result").html("Selected value is: " + getSelectedValue("sample"));
+			});
+
+			function getSelectedValue(id) {
+				return $("#" + id).find("dt a span.value").html();
+			}
+
+			$(document).bind('click', function (e) {
+				var $clicked = $(e.target);
+				if (!$clicked.parents().hasClass("dropdown"))
+					$(".dropdown dd ul").hide();
+			});
+
+
+			$("#flagSwitcher").click(function () {
+				$(".dropdown img.flag").toggleClass("flagvisibility");
+			});
+		});
+    </script>
+    <script type="text/javascript" src="~/web/js/jquery-1.7.2.min.js"></script>
+    <link rel="stylesheet" href="~/web/css/global.css">
+    <!--thumb slider--->
+    <script src="~/web/js/responsiveslides.min.js"></script>
+    <script>
+		// You can also use "$(window).load(function() {"
+		$(function () {
+			$("#slider").responsiveSlides({
+				auto: true,
+				manualControls: '#slider3-pager',
+			});
+		});
+    </script>
+    <!---thumb slider--->
+</head>
+<div class="header-bottom">
+    <div class="wrap">
+        <div class="single">
+            <div class="box_wrapper">
+                <h1>Long Term Business</h1>
+            </div>
+            <div class="single-top">
+                <div class="thum-main">
+                    <div class="slider">
+                        <!-- Slideshow 3 -->
+                        <ul class="rslides rslides1" id="slider">
+                            <li id="rslides1_s0" class="" style="display: block; float: none; position: absolute; opacity: 0; z-index: 1; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic10.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s1" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic9.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s2" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic8.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s3" style="float: left; position: relative; opacity: 1; z-index: 2; display: list-item; transition: opacity 500ms ease-in-out 0s;" class="rslides1_on">
+                                <img src="~/web/images/pic11.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s4" class="" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                                <img src="~/web/images/pic12.jpg" alt="">
+                            </li>
+                            <li id="rslides1_s5" style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;" class="">
+                                <img src="~/web/images/pic13.jpg" alt="">
+                            </li>
+                        </ul>
+                        <!-- Slideshow 3 Pager -->
+                        <br>
+                        <br>
+                        <ul id="slider3-pager" class="rslides_tabs rslides1_tabs">
+                            <li class="rslides1_s1">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic10.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s2">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic9.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s3">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic8.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s4 rslides_here">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic11.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s5">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic12.jpg" alt="">
+                                </a>
+                            </li>
+                            <li class="rslides1_s6">
+                                <a href="#">
+                                    <img src="~/web/images/t-pic13.jpg" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="grid span_2_of_3">
+                    <h3>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        Duis aute irure.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+                        et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.Lorem
+                        ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <p class="about-para">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.aliquam erat vol.Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+                nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud
+                exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor
+                in hendrerit
+            </p>
+            <div class="clear"></div>
+            <div class="links">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon1.png" title="date">
+                            <span>june 14, 2013</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon2.png" title="Admin">
+                            <span>admin</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon3.png" title="Comments">
+                            <span>No comments</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon4.png" title="Lables">
+                            <span>View posts</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/web/images/blog-icon5.png" title="permalink">
+                            <span>permalink</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="team">
+                <h2>Related Posts</h2>
+                <div class="section group">
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic14.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic15.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic16.jpg" alt="" />
+                    </div>
+                    <div class="col_1_of_4 span_1_of_4">
+                        <img src="~/web/images/pic17.jpg" alt="" />
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="leave-comment">
+                    <a href="#" name="comment">Leave a Comment</a>
+                </div>
+                <div class="comments-area">
+                    <form>
+                        <p>
+                            <label>Name</label>
+                            <span>*</span>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Email</label>
+                            <span>*</span>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Website</label>
+                            <input type="text" value="">
+                        </p>
+                        <p>
+                            <label>Subject</label>
+                            <span>*</span>
+                            <textarea></textarea>
+                        </p>
+                        <p>
+                            <input type="submit" value="Post">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

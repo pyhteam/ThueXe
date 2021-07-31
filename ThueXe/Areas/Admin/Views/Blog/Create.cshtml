@@ -1,0 +1,59 @@
+﻿@model ThueXe.Areas.Admin.Models.Entities.Blog
+
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid m-1">
+    <h4>Thêm mới tin tức</h4>
+<hr />
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TieuDe" class="control-label"></label>
+                <input asp-for="TieuDe" class="form-control" />
+                <span asp-validation-for="TieuDe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagesFile" class="control-label"></label>
+                <input asp-for="ImagesFile" type="file" class="form-control" />
+                <span asp-validation-for="ImagesFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TomTat" class="control-label"></label>
+                <input asp-for="TomTat" class="form-control" />
+                <span asp-validation-for="TomTat" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NoiDung" class="control-label"></label>
+               <textarea id="editor" asp-for="NoiDung" class="form-control" row="10"></textarea>
+                <span asp-validation-for="NoiDung" class="text-danger"></span>
+            </div>
+          
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+
+
+@section script{  
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://cdn.ckeditor.com/ckeditor5/29.0.0/classic/ckeditor.js"></script>
+    <script>
+    ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+    </script>
+} 
